@@ -5,9 +5,12 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const koa2Cors = require('koa2-cors');
 
 const index = require('./routes/index')
 const users = require('./routes/users')
+const vue2 = require('./routes/vue2')
+const react16 = require('./routes/react16')
 
 // error handler
 onerror(app)
@@ -19,6 +22,7 @@ app.use(bodyparser({
 app.use(json())
 app.use(logger())
 app.use(require('koa-static')(__dirname + '/public'))
+app.use(koa2Cors());
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'
@@ -35,6 +39,8 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
+app.use(vue2.routes(), vue2.allowedMethods())
+app.use(react16.routes(), react16.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
