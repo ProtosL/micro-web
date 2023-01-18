@@ -17,6 +17,10 @@ export const currentApp = () => {
     return filterApp('activeRule', currentUrl);
 }
 
+export const findAppByRoute = (route) => {
+    return filterApp('activeRule', route);
+}
+
 const filterApp = (key, value) => {
     const apps = getList().filter(item => item[key] === value)
 
@@ -30,5 +34,12 @@ const filterApp = (key, value) => {
  * 子应用是否做了切换
  */
 export const isTurnChild = () => {
-    return window.__CURRENT_SUB_APP__ !== window.location.pathname;
+    // 上一个应用
+    window.__ORIGIN_APP__ = window.__CURRENT_SUB_APP__;
+    if (window.__CURRENT_SUB_APP__ === window.location.pathname) {
+        return false;
+    }
+    // 更新当前应用
+    window.__CURRENT_SUB_APP__ = window.location.pathname;
+    return true;
 }

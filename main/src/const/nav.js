@@ -3,7 +3,7 @@ export const NAV_LIST = [
     name: '首页',
     status: true,
     value: 0,
-    url: '/vue3/#/index',
+    url: '/vue3#/index',
     hash: '',
   },
   {
@@ -23,7 +23,7 @@ export const NAV_LIST = [
     name: '选车',
     status: false,
     value: 3,
-    url: '/vue3/#/select',
+    url: '/vue3#/select',
     hash: '',
   },
   {
