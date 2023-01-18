@@ -13,7 +13,7 @@ import MainNav from "./components/MainNav";
 import Loading from "./components/Loading";
 import Footer from './components/Footer';
 
-import { ref } from 'vue';
+import { loading } from './store';
 
 export default {
     name: 'App',
@@ -24,12 +24,8 @@ export default {
         Footer
     },
     setup() {
-        const loading = ref(true)
-        setTimeout(() => {
-            loading.value = false;
-        }, 2000)
         return {
-            loading
+            loading: loading.loadingStatus
         }
     }
 }
