@@ -1,5 +1,5 @@
-import { performScriptForEval } from "../sandbox/performScript";
 import { fetchResource } from "../utils/fetchResource";
+import { sandBox } from '../sandbox';
 
 /**
  * 加载 html 的方法
@@ -22,7 +22,7 @@ export const loadHtml = async (app) => {
     ct.innerHTML = dom;
 
     scripts.forEach(item => {
-        performScriptForEval(item);
+        sandBox(app, item);
     })
 
     return app;

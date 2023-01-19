@@ -18,9 +18,10 @@ export const bootstrap = () => {
 }
 
 export const mount = () => {
-  render()
+  render();
+  console.log('mount')
 }
 
 export const unmount = () => {
-  console.log('卸载')
+  console.log('unmount')
 }

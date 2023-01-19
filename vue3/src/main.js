@@ -14,14 +14,14 @@ if (!window.__MICRO_WEB__) {
 }
 
 export const bootstrap = () => {
-    console.log('开始加载')
+    console.log('bootstrap')
 }
 
 export const mount = () => {
     render();
-    console.log('渲染成功')
+    console.log('mount')
 }
 
 export const unmount = () => {
-    console.log('卸载', instance)
+    console.log('unmount', instance)
 }
