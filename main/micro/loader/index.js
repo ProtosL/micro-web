@@ -11,7 +11,6 @@ export const loadHtml = async (app) => {
     let entry = app.entry;
 
     const [ dom, scripts ] = await parseHtml(entry);
-    console.log(scripts)
 
     const ct = document.querySelector(container);
 

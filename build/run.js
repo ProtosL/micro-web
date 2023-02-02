@@ -13,7 +13,7 @@ const filePath = {
 // cd 子应用的目录 npm start 启动项目
 function runChild() {
     Object.values(filePath).forEach(item => {
-        childProcess.spawn(`cd ${item} && npm start`, { stdio: "inherit", shell: true })
+        childProcess.spawn(`cd ${item} && yarn start`, { stdio: "inherit", shell: true })
     })
 }
 runChild()

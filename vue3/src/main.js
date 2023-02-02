@@ -18,6 +18,7 @@ export const bootstrap = () => {
 }
 
 export const mount = () => {
+    window.a = 1;
     render();
     console.log('mount')
 }
