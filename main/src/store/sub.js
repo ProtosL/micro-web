@@ -1,6 +1,8 @@
 // import { loading } from '../store'
 // import * as appInfo from '../store'
 
+import * as appInfo from '../store';
+
 export const subNavList = [
     {
         name: 'react15',// 子应用唯一 id
@@ -8,7 +10,7 @@ export const subNavList = [
         // loading,
         container: '#micro-container', // 容器 div 的 id
         activeRule: '/react15', // 子应用激活的路由规则
-        // appInfo,
+        appInfo,
     },
     {
         name: 'react16',
@@ -16,7 +18,7 @@ export const subNavList = [
         // loading,
         container: '#micro-container',
         activeRule: '/react16',
-        // appInfo,
+        appInfo,
     },
     {
         name: 'vue2',
@@ -24,7 +26,7 @@ export const subNavList = [
         // loading,
         container: '#micro-container',
         activeRule: '/vue2',
-        // appInfo,
+        appInfo,
     },
     {
         name: 'vue3',
@@ -32,7 +34,7 @@ export const subNavList = [
         // loading,
         container: '#micro-container',
         activeRule: '/vue3',
-        // appInfo,
+        appInfo,
     },
 ];
 

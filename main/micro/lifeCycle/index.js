@@ -41,7 +41,10 @@ export const beforeLoad = async (app) => {
 
 export const mounted = (app) => {
     if (app && app.mount) {
-        app.mount();
+        app.mount({
+            appInfo: app.appInfo,
+            entry: app.entry
+        });
     }
     runMainLifeCycle('mounted');
 }

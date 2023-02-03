@@ -8,6 +8,7 @@ import "./index.scss"
 const Login = () => {
 
   useEffect(() => {
+    // 隐藏掉 header 和 nav
     const main = getMain()
     if (!main?.appInfo) {
       return;

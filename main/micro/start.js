@@ -2,6 +2,14 @@ import { getList, setList } from "./const/subApps"
 import { setMainLifeCycle } from './const/mainLifeCycle';
 import { rewriteRouter } from "./router/rewriteRouter";
 import { currentApp } from "./utils";
+import { Custom } from './customevent';
+
+const custom = new Custom();
+custom.on('test', data => {
+    console.log(data);
+})
+
+window.custom = custom;
 
 // 实现路由拦截
 rewriteRouter();
