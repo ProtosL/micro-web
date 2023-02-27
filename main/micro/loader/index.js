@@ -10,7 +10,7 @@ export const loadHtml = async (app) => {
     // 子应用的入口
     let entry = app.entry;
 
-    const [ dom, scripts ] = await parseHtml(entry);
+    const [ dom, scripts ] = await parseHtml(entry, app.name);
 
     const ct = document.querySelector(container);
 
@@ -27,7 +27,13 @@ export const loadHtml = async (app) => {
     return app;
 }
 
-export const parseHtml = async (entry) => {
+const cache = {} // 根据子应用的 name 来做缓存
+
+export const parseHtml = async (entry, name) => {
+    if (cache[name]) {
+        return cache[name]
+    }
+    
     const html = await fetchResource(entry);
 
     let allScript = [];
@@ -38,6 +44,8 @@ export const parseHtml = async (entry) => {
     const fetchedScripts = await Promise.all(scriptUrl.map(async item => fetchResource(item)))
 
     allScript = script.concat(fetchedScripts);
+    cache[name] = [dom, allScript]
+    
     return [dom, allScript];
 }
 
