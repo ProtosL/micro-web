@@ -1,5 +1,20 @@
 import { registerMicroApps, start } from "../../micro"
 import { loading } from '../store';
+import { createStore } from '../../micro/store/index';
+
+const store = createStore()
+
+window.store = store
+const storeData = store.getStore()
+
+store.subscribe((newValue, oldValue) => {
+    console.log(newValue, oldValue, '---')
+})
+
+store.update({
+    ...storeData,
+    a: 1
+})
 
 export const registerApp = (list) => {
     // 注册到微前端框架里

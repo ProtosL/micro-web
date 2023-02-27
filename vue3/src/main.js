@@ -18,6 +18,11 @@ export const bootstrap = () => {
 }
 
 export const mount = () => {
+    console.log(window.store.getStore())
+    window.store.update({
+        ...window.store.getStore(),
+        b: 222
+    })
     window.custom.emit('test', {
         a: 1
     })
