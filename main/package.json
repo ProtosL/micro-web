@@ -13,6 +13,7 @@
     "lodash": "^4.17.20",
     "micro-web-project-npm": "^1.0.0",
     "node-sass": "^5.0.0",
+    "qiankun": "^2.10.2",
     "sass-loader": "^10.1.1",
     "single-spa": "^5.8.1",
     "test-micro-web": "^1.0.4",
@@ -26,8 +27,7 @@
     "@vue/compiler-sfc": "^3.0.0-0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "qiankun": "^2.4.4"
+    "eslint-plugin-vue": "^7.0.0-0"
   },
   "eslintConfig": {
     "root": true,

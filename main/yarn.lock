@@ -909,7 +909,14 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime@^7.10.5", "@babel/runtime@^7.11.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.5":
+  version "7.21.0"
+  resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.21.0.tgz#5b55c9d394e5fcf304909a8b00c07dc217b56673"
+  integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
+  dependencies:
+    regenerator-runtime "^0.13.11"
+
+"@babel/runtime@^7.11.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.20.7"
   resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.20.7.tgz#fcb41a5a70550e04a7b708037c7c32f7f356d8fd"
   integrity sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ==
@@ -4956,10 +4963,17 @@ import-from@^2.1.0:
   dependencies:
     resolve-from "^3.0.0"
 
-import-html-entry@^1.11.1, import-html-entry@^1.14.0:
+import-html-entry@^1.11.1:
   version "1.14.0"
   resolved "https://registry.npmmirror.com/import-html-entry/-/import-html-entry-1.14.0.tgz#9a05928373bb7e9362cd8dd428a82387a87524ff"
   integrity sha512-CQQMV+2rxHCLMSXsajV1cjT1g6xi3ujMAPnGwR96xHaN5/JEVIOUGkM7LDRn73dk8E8NaHmOf3rvPPExPPe1xw==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+
+import-html-entry@^1.14.3:
+  version "1.14.3"
+  resolved "https://registry.npmmirror.com/import-html-entry/-/import-html-entry-1.14.3.tgz#6237cc689be3d5148956e8e6df691928499d47ce"
+  integrity sha512-bQOxi0vgebkDjYf510XiRgsRNZR3idBiBXAjJtzOzIO1ukSj+h/lIM3zx7poZiJVMMUuwjiEkYLlvmJNhKw85A==
   dependencies:
     "@babel/runtime" "^7.7.2"
 
@@ -7319,13 +7333,13 @@ q@^1.1.2:
   resolved "https://registry.npmmirror.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==
 
-qiankun@^2.4.4:
-  version "2.8.4"
-  resolved "https://registry.npmmirror.com/qiankun/-/qiankun-2.8.4.tgz#c35244ee8256ddc4e221d066956342d6ff8804f2"
-  integrity sha512-9MCKTJZpb0L7CcWC80jNr4TZz9m2Pvh9QWHNKJ7vZAEUMRZBbMl3+wCV1VBcUJJIgfRMU5G+ksoW142rMFA0Ew==
+qiankun@^2.10.2:
+  version "2.10.2"
+  resolved "https://registry.npmmirror.com/qiankun/-/qiankun-2.10.2.tgz#8a76e0317090720d400d7067ce58afc4184360e6"
+  integrity sha512-lRgz91zS4jyQYHVBVqG+f7MCwITIuxE5/ZP9sTvbfyRKOiJWFGORiJKO9gKRxxWKCkFws1I7rjq/nKd2au6yWA==
   dependencies:
     "@babel/runtime" "^7.10.5"
-    import-html-entry "^1.14.0"
+    import-html-entry "^1.14.3"
     lodash "^4.17.11"
     single-spa "^5.9.2"
 
