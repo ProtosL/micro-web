@@ -3,6 +3,7 @@ import { setMainLifeCycle } from './const/mainLifeCycle';
 import { rewriteRouter } from "./router/rewriteRouter";
 import { currentApp } from "./utils";
 import { Custom } from './customevent';
+import { prefetch } from './loader/prefetch';
 
 const custom = new Custom();
 custom.on('test', data => {
@@ -48,4 +49,6 @@ export const start = () => {
         window.__CURRENT_SUB_APP__ = app.activeRule;
     }
 
+    // 预加载 —— 加载接下来的所有子应用，但是不显示
+    prefetch()
 }
